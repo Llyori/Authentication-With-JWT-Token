@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{/web/signIn.css}" type="text/css" />
+        
+</head>
+
+
+<body>
+    <form method="post" name="myform" action="">
+        <h3>
+            <font color="orange">Log</font>
+            <font color="darkslateblue">In</font>
+        </h3>
+        <label>Email</label><br>
+        <input type="email" name="username" id="email" placeholder="exemple@gmail.com" required><br>
+        <label>Password</label><br>
+        <input type="password" name="password" id="password" placeholder="mot de passe" required><br>
+        <input type="submit" value="Continuer" name="connection" onClick="verify()"><br>
+        <p>J'ai pas de compte <a th:href="@{/oauth2/authorization/google}">Creer un compte</a></p>
+    </form>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+</body>
+
+</html>
